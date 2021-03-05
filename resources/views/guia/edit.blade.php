@@ -16,27 +16,31 @@
    @csrf
    @method('PUT')
    <div class="row">
+   <div class="col-md-2">
+    <label for="" class="form-label">Codigo</label>
+    <input id="codigo" name="codigo" type="text" class="form-control" tabindex="1" value="{{$guia->codigo}}" readonly>    
+  </div>
   <div class="col-md-4">
     <label for="" class="form-label">Nombres</label>
-    <input id="nombresC" name="nombresC" type="text" class="form-control" tabindex="1" value="{{$guia->nombresC}}">    
+    <input id="nombresC" name="nombresC" type="text" class="form-control" tabindex="1" value="{{$guia->nombresC}}" readonly>    
   </div>
   <div class="col-sm-4">
     <label for="" class="form-label">Apellidos</label>
-    <input id="apellidosC" name="apellidosC" type="text" class="form-control" tabindex="2" value="{{$guia->apellidosC}}">
+    <input id="apellidosC" name="apellidosC" type="text" class="form-control" tabindex="2" value="{{$guia->apellidosC}}" readonly>
   </div>
   </div>
   <div class="row">
   <div class="col-sm-2">
     <label for="" class="form-label">Telefono</label>
-    <input id="telefono" name="telefono" type="text" class="form-control" tabindex="3" value="{{$guia->telefono}}">
+    <input id="telefono" name="telefono" type="text" class="form-control" tabindex="3" value="{{$guia->telefono}}" readonly>
   </div>
   <div class="col-sm-2">
     <label for="" class="form-label">DNI</label>
-    <input id="dni" name="dni" type="text" class="form-control" tabindex="4" value="{{$guia->dni}}">
+    <input id="dni" name="dni" type="text" class="form-control" tabindex="4" value="{{$guia->dni}}" readonly>
   </div>
   <div class="col-sm-4">
     <label for="" class="form-label">Direccion</label>
-    <input id="direccion" name="direccion" type="text" class="form-control" tabindex="5" value="{{$guia->direccion}}">
+    <input id="direccion" name="direccion" type="text" class="form-control" tabindex="5" value="{{$guia->direccion}}" readonly>
   </div>
   </div>
   <div class="row">
@@ -61,15 +65,15 @@
   <div class="row">
   <div class="col-md-2">
     <label for="" class="form-label">Marca</label>
-    <input id="marca" name="marca" type="text" class="form-control" tabindex="7" value="{{$guia->marca}}" disabled="true">
+    <input id="marca" name="marca" type="text" class="form-control" tabindex="7" value="{{$guia->marca}}" readonly>
   </div>
   <div class="col-md-2">
     <label for="" class="form-label">Modelo</label>
-    <input id="modelo" name="modelo" type="text" class="form-control" tabindex="8" value="{{$guia->modelo}}" disabled="true">
+    <input id="modelo" name="modelo" type="text" class="form-control" tabindex="8" value="{{$guia->modelo}}" readonly>
   </div>
   <div class="col-md-4">
     <label for="" class="form-label">Serie</label>
-    <input id="serie" name="serie" type="text" class="form-control" tabindex="9" value="{{$guia->serie}}">
+    <input id="serie" name="serie" type="text" class="form-control" tabindex="9" value="{{$guia->serie}}" readonly>
   </div>
   </div>
   <div class="row">
@@ -91,7 +95,7 @@
                                                     <div class="input-group-text"><i class="fa fa-mobile-alt text-info"></i></div>
                                                 </div>
                                                 <select id="estado" name="estado" class="form-control" taboindex="6">
-                                                  <option selected value="{{$guia->estado}}">{{$guia->estado}}</option>
+                                                  <option selected value="{{$guia->estado}}" readonly>{{$guia->estado}}</option>
                                                     <option value = "En revisión">En Revisión</option>
                                                     <option value = "Reparado">Reparado</option>
                                                     <option value = "Entregado">Entregado</option>
@@ -100,11 +104,11 @@
                                         </div>
   <div class="col-sm-2">
     <label for="" class="form-label">Monto</label>
-    <input id="monto" name="monto" type="number" step="any" class="form-control" tabindex="12" value="{{$guia->monto}}">
+    <input id="monto" name="monto" type="number" step="any" class="form-control" tabindex="12" value="{{$guia->monto}}" >
   </div>
     <div class="col-sm-3">
     <label for="" class="form-label">Fecha Ingreso</label>
-    <input id="fecha_ing" name="fecha_ing" type="text" class="form-control" tabindex="13" value="{{$guia->fecha_ing}}" disabled="true">
+    <input id="fecha_ing" name="fecha_ing" type="text" class="form-control" tabindex="13" value="{{$guia->fecha_ing}}" disabled="true" readonly>
     </div>
   </div>
   <br>

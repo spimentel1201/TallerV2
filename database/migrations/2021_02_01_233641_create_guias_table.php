@@ -15,6 +15,7 @@ class CreateGuiasTable extends Migration
     {
         Schema::create('guias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('codigo');
             $table->string('nombresC',50);
             $table->string('apellidosC',35);
             $table->string('dni',8);

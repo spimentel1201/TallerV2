@@ -20,8 +20,10 @@ class GuiaController extends Controller
     {
         //
         $nombres=$request->get('buscarpor');
+        $tipo=$request->get('cosa');
         //dd($nombres);
-        $guias =Guia::where('nombresC','like',"%$nombres%")->paginate(5);
+        //$guias =Guia::where('codigo','like',"%$nombres%")->paginate(5);
+        $guias =Guia::buscarpor($tipo,$nombres)->paginate(100);
         //return dd($artefacto);
         //$guias=Guia::all();
         return view('guia.index')->with('guias',$guias);
@@ -49,6 +51,7 @@ class GuiaController extends Controller
     {
         //
         $guias = new Guia();
+        $guias->codigo = $request->get('codigo');
         $guias->nombresC = $request->get('nombresC');
         $guias->apellidosC = $request->get('apellidosC');
         $guias->telefono = $request->get('telefono');
@@ -103,6 +106,7 @@ class GuiaController extends Controller
     {
         //
         $guia=Guia::find($id);
+        $guia->codigo = $request->get('codigo');
         $guia->nombresC = $request->get('nombresC');
         $guia->apellidosC = $request->get('apellidosC');
         $guia->telefono = $request->get('telefono');

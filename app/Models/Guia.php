@@ -9,4 +9,9 @@ class Guia extends Model
 {
     use HasFactory;
     protected $dates = ['fecha_ing', 'another_date_field'];
+    public function scopeBuscarpor($query,$tipo,$buscar){
+        if(($tipo) && ($buscar)){
+            return $query->where($tipo,'like',"%$buscar%");
+        }
+    }
 }
