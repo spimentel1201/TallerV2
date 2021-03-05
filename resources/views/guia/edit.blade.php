@@ -12,6 +12,7 @@
   <div class="row">
   <h4 class="register-heading">Datos del Cliente</h4>
   </div>
+  a
 </div>    
    @csrf
    @method('PUT')
