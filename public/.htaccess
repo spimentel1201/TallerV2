@@ -2,6 +2,9 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
+    <IfModule dir_module>
+        DirectoryIndex index.html index.php
+    </IfModule> 
 
     RewriteEngine On
 
@@ -11,8 +14,8 @@
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
 
 
     # Send Requests To Front Controller...
