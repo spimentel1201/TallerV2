@@ -1,5 +1,8 @@
 {
     "private": true,
+    "engines": {
+        "node": "12.x"
+    },
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -7,6 +10,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
+        "start": "node index.js",
+        "build": "webpack",
         "production": "mix --production",
         "postinstall": "npm run production",
         "heroku-prebuild": "npm install -f",
